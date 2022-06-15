@@ -1,0 +1,69 @@
+:root {
+  --clr-cta-text: hsl(356, 100%, 66%);
+  --clr-cta-hover-bg: hsl(355, 100%, 74%);
+  --clr-cta-headings: hsl(208, 49%, 24%);
+ 
+  --clr-text: hsl(0, 0%, 100%);
+  --clr-footer-text: hsl(240, 2%, 79%);
+  --clr-body-copy: hsl(207, 13%, 34%);
+  --clr-footer-bg: hsl(240, 10%, 16%);
+ 
+  /* Background gradient - Intro/CTA mobile nav: */
+
+  --clr-light-red0: hsl(13, 100%, 72%);
+  --clr-light-red1: hsl(353, 100%, 62%);
+
+  /* Background gradient - body: */
+
+  --clr-gray-blue: hsl(237, 17%, 21%);
+  --clr-blue: hsl(237, 23%, 32%);
+
+  --font-family0: 'Overpass', sans-serif;
+  --font-family1: 'Ubuntu', sans-serif;
+  --font-size: 62.5%;
+}
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ---- Page style ---- */
+
+html {
+  font-size: var(--font-size);
+  font-family: var(--font-family0);
+}
+
+body {
+  background-color: var(--clr-bg0);
+}
+
+
+/* Utility classes  */
+
+.flex {
+  display: flex;  
+}
+
+.grid {
+  display: grid;
+}
+
+
+.toggle-btn {
+  display: none;
+}
+
+
+
+
+/* footer */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+

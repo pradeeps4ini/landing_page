@@ -53,21 +53,55 @@ ul {
 h1, 
 h2 {
   font-size: 3rem;
+}
+
+h2, h1, li, button {
   color: var(--clr-text);
 }
 
+
 header {
+  padding-inline: 9rem;
 }
+
+
+button {
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: none;
+}
+
+.login {
+  color: var(--clr-text);
+}
+
+.signup {
+  padding: 1.5rem 4rem;
+  border-radius: 3rem;
+  background-color: var(--clr-text);
+  color: var(--clr-cta-text);
+}
+
+
+/* header wrapper  */
+
+.header-wrapper {
+  min-height: 100vh;
+  background-color: var(--clr-light-red0);
+  background-image: url(./images/bg-pattern-intro-desktop.svg);
+  background-position: 0;
+  background-blend-mode: unset;
+  border-bottom-left-radius: 8rem;
+}
+
 
 /* header */
 
 header {
   gap: 7rem;
-  padding-inline-start: 9rem;
-  padding-inline-end: 3rem;
   padding-block: 5rem;
   font-size: 1.6rem;
-  background-color: var(--clr-light-red0); 
 }
 
 header > h2 {
@@ -103,15 +137,20 @@ nav > ul {
 
 .sub-menu > li {
   margin-bottom: 1rem;
+  color: var(--clr-blue-gray);
 }
 
 .sub-menu,
-.sub-menu-check {
+.sub-menu-check,
+.toggle-btn {
   display: none;
 }
 
-/* nav-toggle  */
+.action-btn {
+  gap: 3rem;
+}
 
+/* nav-toggle  */
 
 .sub-menu-check:checked ~ .sub-menu {
   display: block;
@@ -142,3 +181,59 @@ nav > ul {
   text-align: center;
 }
 
+
+
+/* media query */
+
+@media (max-width: 1000px) {
+  
+  header {
+    justify-content: space-between;
+  }
+
+  nav {
+    /* i don't know where i lost the specificity */
+    display: none !important;
+  }
+
+  .nav-toggle-btn span {
+    position: absolute;
+    top: 2.5rem;
+    right: 10px;
+  }
+
+  .nav-toggle-btn span,
+  .nav-toggle-btn span::before,
+  .nav-toggle-btn span::after {
+    display: block;
+    position: relative;
+    inline-size: 3rem;
+    block-size: 3px;
+    background-color: var(--clr-text);
+  }
+
+  .nav-toggle-btn span::before,
+  .nav-toggle-btn span::after {
+    position: absolute;
+    content: "";
+  }
+
+  .nav-toggle-btn span::before {
+    top: 7px;
+  }
+
+  .nav-toggle-btn span::after {
+    bottom: 7px;
+  }
+
+  .toggle-btn:checked ~ nav {
+    display: flex !important;
+    flex-flow: column nowrap;
+    position: absolute;
+    top: 10rem;
+    inline-size: 80vw;
+    block-size: 80vh;
+    color: var(--clr-blue-gray);
+    background-color: var(--clr-text);
+  }
+}

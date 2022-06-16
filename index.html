@@ -12,56 +12,57 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="header-wrapper">
+    <header class="flex"> 
+      <h2>Blogr</h2>
 
-  <header class="flex"> 
-    <h2>Blogr</h2>
+      <input type="checkbox" id="toggle-btn" class="toggle-btn">
+      <nav class="flex">
+        <ul class="flex menu">
+          <li>
+            <input type="checkbox" id="sub-menu-check0" class="sub-menu-check">
+            Product
+            <label for="sub-menu-check0" class="toggle-sub-menu"><img src="./images/arrow-light.svg" alt=""></label>
 
-    <input type="checkbox" id="toggle-btn" class="toggle-btn">
-    <nav class="flex">
-      <ul class="flex menu">
-        <li>
-          <input type="checkbox" id="sub-menu-check0" class="sub-menu-check">
-          Product
-          <label for="sub-menu-check0" class="toggle-sub-menu"><img src="./images/arrow-light.svg" alt=""></label>
-
-          <ul class="sub-menu">
-            <li>Overview</li>
-            <li>Pricing</li>
-            <li>Marketplace</li>
-            <li>Features</li>
-            <li>Integrations</li>
-          </ul>
-        </li>
-        <li>
-          <input type="checkbox" id="sub-menu-check1" class="sub-menu-check" >
-          Company
-          <label for="sub-menu-check1" class="toggle-sub-menu"><img src="./images/arrow-light.svg" alt=""></label>
-          <ul class="sub-menu">
-            <li>About</li>
-            <li>Team</li>
-            <li>Blog</li>
-            <li>Careers</li>
-          </ul>
-        </li>
-        <li>
-          Connect
-          <input type="checkbox" id="sub-menu-check2" class="sub-menu-check">
-          <label for="sub-menu-check2" class="toggle-sub-menu"><img src="./images/arrow-light.svg" alt=""></label>
-          <ul class="sub-menu">
-            <li>Contact</li>
-            <li>Newsletter</li>
-            <li>LinkedIn</li>
-          </ul>
-        </li>
-      </ul>
-      <div class="action-btn">
-        <button type="button" class="login">Login</button>
-        <button type="button" class="signup">Sign up</button>
-      </div>
-    </nav>
-    <label for="toggle-btn" class="nav-toggle-btn"><span></span></label>
-  </header>
-  <!--
+            <ul class="sub-menu">
+              <li>Overview</li>
+              <li>Pricing</li>
+              <li>Marketplace</li>
+              <li>Features</li>
+              <li>Integrations</li>
+            </ul>
+          </li>
+          <li>
+            <input type="checkbox" id="sub-menu-check1" class="sub-menu-check" >
+            Company
+            <label for="sub-menu-check1" class="toggle-sub-menu"><img src="./images/arrow-light.svg" alt=""></label>
+            <ul class="sub-menu">
+              <li>About</li>
+              <li>Team</li>
+              <li>Blog</li>
+              <li>Careers</li>
+            </ul>
+          </li>
+          <li>
+            Connect
+            <input type="checkbox" id="sub-menu-check2" class="sub-menu-check">
+            <label for="sub-menu-check2" class="toggle-sub-menu"><img src="./images/arrow-light.svg" alt=""></label>
+            <ul class="sub-menu">
+              <li>Contact</li>
+              <li>Newsletter</li>
+              <li>LinkedIn</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="action-btn flex">
+          <button type="button" class="login">Login</button>
+          <button type="button" class="signup">Sign up</button>
+        </div>
+      </nav>
+      <label for="toggle-btn" class="nav-toggle-btn"><span></span></label>
+    </header>
+  </div>
+    <!--
   A modern publishing platform
   Grow your audience and build your online brand
 

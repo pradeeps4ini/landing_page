@@ -12,12 +12,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="header-wrapper">
+  <div class="header-wrapper grid">
     <header class="flex"> 
       <h2>Blogr</h2>
 
       <input type="checkbox" id="toggle-btn" class="toggle-btn">
-      <nav class="flex">
+      <div class="overlay"></div>
+      <nav>
         <ul class="flex menu">
           <li>
             <input type="checkbox" id="sub-menu-check0" class="sub-menu-check">
@@ -54,70 +55,102 @@
             </ul>
           </li>
         </ul>
-        <div class="action-btn flex">
+        <div class="action-btn">
           <button type="button" class="login">Login</button>
           <button type="button" class="signup">Sign up</button>
         </div>
       </nav>
       <label for="toggle-btn" class="nav-toggle-btn"><span></span></label>
     </header>
+
+    <section class="about flex">
+      <h1>A modern publishing platform</h1>
+      <p>Grow you audent and build your online brand</p>
+      <div>
+        <button class="start-btn">Start for free</button>
+        <button class="learn-more-btn">Learn more</button>
+      </div>
+    </section>
   </div>
-    <!--
-  A modern publishing platform
-  Grow your audience and build your online brand
-
-  Start for Free
-  Learn More
-
-  Designed for the future
-
-  Introducing an extensible editor
-  Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+  <main>
+    <section class="section1 grid">
+      <h2>Designed for the future</h2>
+      <div class="text flex">
+        <div>
+          <h3>Introducing an extensible editor</h3>
+          <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
   The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
   videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
-  change the looks of a blog.
-
-  Robust content management
-  Flexible content management enables users to easily move through posts. Increase the usability of your blog 
-  by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
-
-  State of the Art Infrastructure
-  With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
-  This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-
-  Free, open, simple
-  Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+  change the looks of a blog.</p>
+        </div>
+        <div>
+          <h3>Robust content management</h3>
+          <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+      by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+        </div>
+      </div>
+      <div>
+      </div>
+    </section>
+    <section class="section2 grid">
+      <div><img src="./images/illustration-phones.svg" alt=""></div>
+      <div>
+        <h2>State of the Art Infrastructure</h2>
+        <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+      This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+      </div>
+    </section>
+    <section class="section3 grid">
+      <div><img src="./images/illustration-laptop-desktop.svg" alt=""></div>
+      <div>
+        <h2>Free, open, simple</h2>
+        <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
   features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
-  and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+  and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+      </div>
+      <div> 
+        <h2>Powerful tooling</h2>
+        <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+      capable of producing even the most complicated sites.</p>
+      </div>
+    </section>
+  </main>
 
-  Powerful tooling
-  Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-  capable of producing even the most complicated sites.
-
-  Product
-
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
-
-  Company
-
-  About
-  Team
-  Blog
-  Careers
-
-  Connect
-  
-  Contact
-  Newsletter
-  LinkedIn
-  -->
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <footer class="grid">
+    <div>
+      <h2>Blogr</h2>
+    </div>
+    <div>
+      <ul>
+        <h3>Product</h3>
+        <li>Overview</li>
+        <li>Pricing</li>
+        <li>Marketplace</li>
+        <li>Features</li>
+        <li>Integrations</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <h3>Product</h3>
+        <li>About</li>
+        <li>Team</li>
+        <li>Blog</li>
+        <li>Careers</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <h3>Connect</h3>
+        <li>Contact</li>
+        <li>Newsletter</li>
+        <li>Linkedin</li>
+      </ul>
+    </div>
+    <div>
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.</p>
+    </div>
   </footer>
 </body>
 </html>

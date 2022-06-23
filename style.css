@@ -282,8 +282,12 @@ nav > ul {
 /* main */
 
 main {
-  grid-template: repeat(auto, minmax(500px, 1fr)) / 1fr;
+  grid-template: repeat(auto, minmax(400px, 1fr)) / 1fr;
   row-gap: 3rem;
+}
+
+section {
+  max-inline-size: 100vw;
 }
 
 .section > h2 {
@@ -293,6 +297,13 @@ main {
   padding-block-end: clamp(1rem, calc(7vw + 1rem), 10rem);
 }
 
+.section1 div,
+.section2 div {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+  text-align: left;
+}
 
 .section1 {
   position: relative;
@@ -300,23 +311,24 @@ main {
   gap: 4rem;
   inline-size: 100vw;
   padding-block-start: 10rem;
-  padding-block-end: clamp(1rem, calc(9vw + 1rem), 10rem);
+  padding-block-end: 10rem;
   text-align: center;
+  overflow: hidden;
 }
 
 .section1  :is(h2, h3) {
   color: var(--clr-cta-headings);
 }
 
-.section1 div {
+.section1 h2 {
+  grid-area: heading;
+}
+
+.section1 div { 
   place-self: center;
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 2rem;
   margin-block-end: 3rem;
-  padding-inline: clamp(1rem ,calc(5vw + 1rem), 8rem) clamp(1rem, calc(1vw + 1rem), 1rem);
+  padding-inline: clamp(1rem, calc(5vw + 1rem), 8rem) 1rem;
   color: var(--clr-body-copy);
-  text-align: left;
 }
 
 .section1 > picture {
@@ -338,9 +350,35 @@ main {
 }
 
 .section2  {
-  
+  position: relative;
+  grid-template: "phone content" 400px / 1fr 1fr;
+  gap: 2rem;
+  background-color: var(--clr-gray-blue);
+  border-top-right-radius: 10rem;
+  border-bottom-left-radius: 10rem;
 }
 
+.section2 > picture {
+  grid-area: phone;
+  position: relative;
+} 
+
+.section2 img {
+  max-inline-size: 100%;
+  position: absolute;
+  top: -150px;
+}
+
+.section2 div {
+  grid-area: content;
+  place-self: center;
+  padding-inline: 0 clamp(1rem, calc(8vw + 1rem), 10rem);
+}
+
+
+.section2 p {
+  color: var(--clr-text);
+}
 
 @media (max-width: 750px) {
   .header-wrapper {
@@ -366,13 +404,31 @@ main {
 
   .section1 {
     grid-template: "heading" 1fr "svg-image" auto "text" auto / 1fr;
-    padding-block-end: 0;
+    padding-block-end: 18rem;
   }
 
   .section1 img {
     position: static;
     inset: 0;
     max-inline-size: 100%;
+  }
+
+  .section2 {
+    grid-template: "phone" .85fr "content" 1fr / 1fr;   
+    padding-block-end: 8rem;
+    background-image: url("./images/bg-pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-position: 40% 120%;
+  }
+
+ .section2 div {
+  padding-inline: clamp(1rem, calc(5vw + 1rem), 8rem) 1rem;
+ }
+
+ .section2 img {
+    max-inline-size: 100%;
+    position: absolute;
+    top: -180px; 
   }
 }
 

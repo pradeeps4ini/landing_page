@@ -364,7 +364,7 @@ footer ul li {
   .header-wrapper {
     border-bottom-left-radius: 10rem;
   }
-
+  
   header {
     justify-content: space-between;
   }
@@ -372,6 +372,11 @@ footer ul li {
   nav {
     display: none;
   }  
+ 
+  nav ul,
+  nav li {
+    color: var(--clr-gray-blue);
+  }
 
   .toggle-btn:checked ~ nav {
     display: flex;
@@ -379,7 +384,17 @@ footer ul li {
     gap: 4rem;
     position: absolute;
     top: 25%;
-    left: 25%;
+    left: 0%;
+  }
+ 
+  .toggle-btn:checked ~ nav > ul {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+  }
+
+  .singup {
+    max-inline-size: 10rem;
   }
 
   .section1 {
@@ -445,11 +460,13 @@ footer ul li {
  .overlay {
   display: none;
   position: absolute;
-  top: 0;
-  right: 0;
-  inline-size: 100%;
-  block-size: 100%;
-  background-color: limegreen;
+  top: 20%;
+  right: 10%;
+  bottom: 20%;
+  left: 10%;
+  inline-size: 80vw;
+  block-size: 100vh;
+  background-color: var(--clr-text);
  }
 
  .nav-toggle-btn {
@@ -490,7 +507,7 @@ footer ul li {
   }
   
   .toggle-btn:checked ~ .nav-toggle-btn > span {
-    background-color: limegreen;
+    background-color: var(--clr-bg-light-red);
   }
 
   .toggle-btn:checked ~ .nav-toggle-btn > span::before {
@@ -505,6 +522,21 @@ footer ul li {
     display: block;
     z-index: 0;
   }
+
+  .action-btn .login {
+    color: var(--clr-gray-blue);
+  }
+
+  .action-btn .signup {
+    background: var(--clr-bg-light-red);
+    color: var(--clr-text);
+  }
+  
+  .toggle-btn:checked ~ nav > .action-btn { 
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+  }
 }
 
 @media (min-width: 750px) and (max-width: 1000px) {
@@ -516,8 +548,8 @@ footer ul li {
 
   .toggle-btn:checked ~ nav > .action-btn { 
     position: absolute;
-    display: grid;
-    gap: 2rem;
+    top: 30%;
+    left: 45%;
   }
 
   .section3 img {

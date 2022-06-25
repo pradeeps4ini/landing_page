@@ -178,6 +178,7 @@ nav > ul {
 .about p {
   font-size: 2rem;
   margin-bottom: 3rem;
+  color: var(--clr-text);
 }
 
 .about .start-btn {

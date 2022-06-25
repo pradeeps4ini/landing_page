@@ -433,6 +433,7 @@ footer ul li {
   footer {
     grid-template: repeat(4, 1fr) / 1fr;
     place-items: center;
+    padding-block: 3rem 6rem;
   }
 }
 

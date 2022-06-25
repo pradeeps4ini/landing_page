@@ -399,7 +399,6 @@ footer ul li {
 
   .section1 {
     grid-template: "heading" 1fr "svg-image" auto "text" auto / 1fr;
-    padding-block-end: 18rem;
   }
 
   .section1 img {
@@ -409,7 +408,7 @@ footer ul li {
   }
 
   .section2 {
-    grid-template: "phone" auto "content" 1fr / 1fr;   
+    grid-template: "phone" 300px "content" 1fr / 1fr;   
     padding-block-end: 8rem;
     background-image: url("./images/bg-pattern-circles.svg");
     background-repeat: no-repeat;
@@ -421,9 +420,8 @@ footer ul li {
  }
 
  .section2 img {
-    max-inline-size: 100%;
-    position: relative;
-    top: -180px; 
+   position: relative;
+   max-inline-size: 100%;
   }
 
   .section3 {

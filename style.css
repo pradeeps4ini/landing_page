@@ -409,7 +409,7 @@ footer ul li {
   }
 
   .section2 {
-    grid-template: "phone" .85fr "content" 1fr / 1fr;   
+    grid-template: "phone" auto "content" 1fr / 1fr;   
     padding-block-end: 8rem;
     background-image: url("./images/bg-pattern-circles.svg");
     background-repeat: no-repeat;
@@ -422,7 +422,7 @@ footer ul li {
 
  .section2 img {
     max-inline-size: 100%;
-    position: absolute;
+    position: relative;
     top: -180px; 
   }
 
